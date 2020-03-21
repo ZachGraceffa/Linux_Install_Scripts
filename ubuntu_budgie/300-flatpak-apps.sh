@@ -1,0 +1,1 @@
+../ubuntu/300-flatpak-apps.sh

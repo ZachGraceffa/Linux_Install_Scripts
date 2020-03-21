@@ -1,0 +1,1 @@
+../ubuntu/215-apps-laptop.sh

@@ -1,0 +1,1 @@
+../ubuntu/600-zsh.sh
