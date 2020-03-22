@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# Other apps
+sudo apt install -y neofetch flameshot guake
+
+# Restricted addons
+sudo apt install -y ubuntu-restricted-extras ubuntu-restricted-addons
+sudo fc-cache -f -v
+
 # Google Chrome
 ################################################################################
 if [ ! -e /etc/apt/trusted.gpg.d/google.gpg ]; then
@@ -15,10 +22,19 @@ sudo apt update
 sudo apt install -y google-chrome-stable
 ################################################################################
 
-# Other apps
-sudo apt install -y pavucontrol neofetch flameshot libqt5svg5 s-tui
+# Guake Configure
+################################################################################
 
-# Restricted addons
-sudo apt install -y ubuntu-restricted-extras ubuntu-restricted-addons
-sudo fc-cache -f -v
+/usr/bin/guake &
+sleep 5 # let main guake process start and initialize D-Bus session
+
+# adjust tab which was opened by default
+guake --rename-tab="iotop" --execute="/usr/bin/iotop"
+
+# create new tab, start bash session in it
+guake --new-tab --execute="/usr/bin/bash"
+# and then execute htop, renaming the tab to "htop"
+guake --execute="/usr/bin/htop" --rename-current-tab="htop"
+
+################################################################################
 
