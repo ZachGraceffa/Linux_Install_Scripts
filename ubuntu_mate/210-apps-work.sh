@@ -1,1 +1,0 @@
-../ubuntu/210-apps-work.sh

@@ -1,1 +1,0 @@
-../ubuntu/510-kvm-qemu.sh

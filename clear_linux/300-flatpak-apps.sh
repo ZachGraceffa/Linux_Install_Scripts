@@ -1,1 +1,0 @@
-../cross_distro/300-flatpak-apps.sh

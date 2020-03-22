@@ -1,1 +1,0 @@
-../ubuntu/200-apps.sh
