@@ -29,12 +29,17 @@ sudo apt install -y google-chrome-stable
 sleep 5 # let main guake process start and initialize D-Bus session
 
 # adjust tab which was opened by default
-guake --rename-tab="iotop" --execute="/usr/bin/iotop"
+guake --rename-tab=">"
 
 # create new tab, start bash session in it
 guake --new-tab --execute="/usr/bin/bash"
 # and then execute htop, renaming the tab to "htop"
-guake --execute="/usr/bin/htop" --rename-current-tab="htop"
+guake --execute="htop" --rename-current-tab="htop"
+
+# create new tab, start bash session in it
+guake --new-tab --execute="/usr/bin/bash"
+# and then execute htop, renaming the tab to "htop"
+guake --execute="sudo iotop" --rename-current-tab="iotop"
 
 ################################################################################
 
